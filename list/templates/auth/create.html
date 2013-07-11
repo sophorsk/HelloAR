@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<b>Create an account:</b>
+
+{% if error %}<p><i>{{ error }}</i></p>{% endif %}
+
+<form action="/list/auth/create/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Save" />
+</form>
+
+{% endblock %}

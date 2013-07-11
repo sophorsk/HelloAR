@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table>
+<tr><th style="text-align:left">Item</th><th style="text-align:left;padding-left:20pt">Date Created</th></tr>
+<tr>
+<td>
+{{ item.text }}
+</td>
+<td style="padding-left:20pt">
+{{ item.created }}
+</td>
+</tr>
+</table>
+
+{% endblock %}

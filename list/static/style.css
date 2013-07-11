@@ -1,0 +1,61 @@
+#body {
+    margin-left: 50px;
+}
+
+#title {
+    background:#302b1d;
+    padding: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+
+#menu {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom: 10px solid #3f522b;
+}
+
+#menu ul /* Primary and secondary links */ {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+
+#menu li /* A simple method to get navigation links to appear in one line. */ {
+/*  float: left; /* LTR */
+    display: inline;
+    padding: 0 20px 0 0; /* LTR */
+    color: #3f522b;
+    font-weight: bold;
+}
+
+
+#menu li a {
+    text-decoration: none;
+    color: #3f522b;
+}
+
+#menu li a:hover {
+    color: #3f522b;
+    border-bottom: 2px solid #423638;
+}
+
+#menu li a.current {
+    color: #3f522b;
+    border-bottom: 2px solid #423638;
+}
+
+#content {
+    padding: 10px;
+}
+
+#list {
+    float: left;
+    width: 50%;
+}
+
+#today {
+    float: right;
+    width: 40%;
+}

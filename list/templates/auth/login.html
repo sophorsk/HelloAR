@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if error %}<p><i>{{ error }}</i></p>{% endif %}
+
+<form action="/list/auth/login/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Login" />
+</form>
+
+<p><i>or</i></p>
+
+<p><a href="/list/auth/create">Create an account</a></p>
+
+{% endblock %}
