@@ -6,10 +6,15 @@ from mongodbforms import DocumentForm,EmbeddedDocumentForm
 
 import datetime
 
+# store the images using GridFSStorage
+from django.db import models
+from django_mongodb_engine.storage import GridFSStorage
+gridfs_storage = GridFSStorage()
+
 class Item(Document):
     user = ReferenceField(User)
     text = StringField(max_length=200)
-    #picture = FileField()
+    picture = models.FileField(storage=gridfs_storage, upload_to='/')
     created = DateTimeField(default=datetime.datetime.now)
 
 class ItemForm(DocumentForm):
